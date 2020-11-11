@@ -1,0 +1,33 @@
+#1. function to check prime numbers between a range of numbers
+lower = int(input('Enter lower range: '))
+upper = int(input('Enter upper range: '))
+prime_num = []
+
+for num in range(lower, upper+1):
+
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            prime_num.append(num)
+            
+print(prime_num)
+
+#2. function to create a christmas tree using lists, if statements, for loops e.t.c
+picture = [
+    [0,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0],
+    [0,1,1,1,1,1,0],
+    [1,1,1,1,1,1,1],
+    [0,0,0,1,0,0,0],
+    [0,0,0,1,0,0,0]
+]
+
+for image in picture:
+    for pixel in image:
+        if (pixel == 1):
+            print('*', end='')
+        else:
+            print(' ', end='')
+    print('')
